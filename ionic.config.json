@@ -1,5 +1,7 @@
 {
   "name": "radio-ancora",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
