@@ -9,8 +9,6 @@ import { Platform } from '@ionic/angular';
 })
 export class HomePage {
 
-    tocando: boolean = false;
-
     options = {
         initFullscreen: false, // true is default. iOS only.
         keepAwake: false, // prevents device from sleeping. true is default. Android only.
@@ -19,23 +17,20 @@ export class HomePage {
         },
         errorCallback: function (errMsg) {
             console.log("Error! " + errMsg);
-            this.tocando = false;
         }
     };
     audioUrl = 'http://us4.internet-radio.com:8266/listen.pls&t=.m3u';
     ///audioUrl = 'https://stream.asaweb.com.br:8032/stream';
 
     constructor(public platform: Platform) {
-        window['plugins'].streamingMedia.playAudio(this.audioUrl);
+        //window['plugins'].streamingMedia.playAudio(this.audioUrl);
     }
 
     ligarSom() {
-        this.tocando = true;
         window['plugins'].streamingMedia.playAudio(this.audioUrl, this.options);
     }
 
     pararSom() {
-        this.tocando = false;
         window['plugins'].streamingMedia.stopAudio();
     }
 

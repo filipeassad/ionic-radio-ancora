@@ -5,12 +5,16 @@
 <ion-grid text-center>
   <ion-row class="player">
       <ion-col> 
-        <audio
-              controls
-              src="http://us4.internet-radio.com:8266/listen.pls&t=.m3u">
-                  Your browser does not support the
-                  <code>audio</code> element.
-          </audio>      
+        <ion-row>
+            <ion-col>
+                <ion-button color="primary" (click)="ligarSom()"><img src="../../assets/play.png" width="50px"
+                        style="padding: 10px;"> </ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button color="danger" (click)="pararSom()"><img src="../../assets/pause.png" width="50px"
+                        style="padding: 10px;"></ion-button>
+            </ion-col>
+        </ion-row>
       </ion-col>
   </ion-row>        
     
